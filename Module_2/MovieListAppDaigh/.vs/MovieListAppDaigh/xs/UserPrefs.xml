@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{18965ABE-50EF-42F6-8AAC-7025D1ED5F17}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MovieListAppDaigh PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="MovieListAppDaigh/appsettings.json">
+    <Files>
+      <File FileName="MovieListAppDaigh/Models/MovieContext.cs" Line="27" Column="33" />
+      <File FileName="MovieListAppDaigh/Models/Movie.cs" Line="19" Column="41" />
+      <File FileName="MovieListAppDaigh/Program.cs" Line="8" Column="97" />
+      <File FileName="MovieListAppDaigh/appsettings.json" Line="10" Column="22" />
+      <File FileName="MovieListAppDaigh/Migrations/20220904133738_initial.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MovieListAppDaigh" expanded="True">
+            <Node name="MovieListAppDaigh" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

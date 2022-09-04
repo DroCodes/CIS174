@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1703.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieListAppDaigh", "MovieListAppDaigh\MovieListAppDaigh.csproj", "{18965ABE-50EF-42F6-8AAC-7025D1ED5F17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18965ABE-50EF-42F6-8AAC-7025D1ED5F17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18965ABE-50EF-42F6-8AAC-7025D1ED5F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18965ABE-50EF-42F6-8AAC-7025D1ED5F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18965ABE-50EF-42F6-8AAC-7025D1ED5F17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA66DEE3-05C9-497D-8B26-DB1B6351F5BC}
+	EndGlobalSection
+EndGlobal
