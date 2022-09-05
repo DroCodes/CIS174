@@ -12,8 +12,8 @@ using MovieListAppDaigh.Models;
 namespace MovieListAppDaigh.Migrations
 {
     [DbContext(typeof(MovieContext))]
-    [Migration("20220904133738_initial")]
-    partial class initial
+    [Migration("20220905030405_AddGenreProperty")]
+    partial class AddGenreProperty
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,6 +24,57 @@ namespace MovieListAppDaigh.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("MovieListAppDaigh.Models.Genre", b =>
+                {
+                    b.Property<string>("GenreId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("GenreId");
+
+                    b.ToTable("Genres");
+
+                    b.HasData(
+                        new
+                        {
+                            GenreId = "A",
+                            Name = "Action"
+                        },
+                        new
+                        {
+                            GenreId = "C",
+                            Name = "Comedy"
+                        },
+                        new
+                        {
+                            GenreId = "D",
+                            Name = "Drama"
+                        },
+                        new
+                        {
+                            GenreId = "H",
+                            Name = "Horror"
+                        },
+                        new
+                        {
+                            GenreId = "M",
+                            Name = "Musical"
+                        },
+                        new
+                        {
+                            GenreId = "R",
+                            Name = "RomCom"
+                        },
+                        new
+                        {
+                            GenreId = "S",
+                            Name = "SciFi"
+                        });
+                });
+
             modelBuilder.Entity("MovieListAppDaigh.Models.Movie", b =>
                 {
                     b.Property<int>("MovieId")
@@ -31,6 +82,10 @@ namespace MovieListAppDaigh.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MovieId"), 1L, 1);
+
+                    b.Property<string>("GenreId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -46,12 +101,15 @@ namespace MovieListAppDaigh.Migrations
 
                     b.HasKey("MovieId");
 
+                    b.HasIndex("GenreId");
+
                     b.ToTable("Movies");
 
                     b.HasData(
                         new
                         {
                             MovieId = 1,
+                            GenreId = "D",
                             Name = "Casablanca",
                             Rating = 5,
                             Year = 1942
@@ -59,6 +117,7 @@ namespace MovieListAppDaigh.Migrations
                         new
                         {
                             MovieId = 2,
+                            GenreId = "D",
                             Name = "Wonder Woman",
                             Rating = 3,
                             Year = 2017
@@ -66,10 +125,22 @@ namespace MovieListAppDaigh.Migrations
                         new
                         {
                             MovieId = 3,
+                            GenreId = "D",
                             Name = "Moonstruck",
                             Rating = 4,
                             Year = 1988
                         });
+                });
+
+            modelBuilder.Entity("MovieListAppDaigh.Models.Movie", b =>
+                {
+                    b.HasOne("MovieListAppDaigh.Models.Genre", "Genre")
+                        .WithMany()
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Genre");
                 });
 #pragma warning restore 612, 618
         }

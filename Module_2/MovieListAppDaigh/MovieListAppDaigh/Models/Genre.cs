@@ -3,9 +3,7 @@ namespace MovieListAppDaigh.Models
 {
     public class Genre
     {
-        public Genre()
-        {
-        }
+        public string? GenreId { get; set; }
+        public string? Name { get; set; }
     }
 }
-
