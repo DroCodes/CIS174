@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MovieListAppDaigh.Models;
 using Microsoft.EntityFrameworkCore;
 

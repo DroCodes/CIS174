@@ -1,0 +1,42 @@
+﻿@model Contacts;
+@{
+    string title = ViewBag.Action + " Contacts";
+    ViewBag.Title = title;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <form asp-action="Add" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="row mb-1">
+            <label asp-for="Name" class="col-sm-3 col-lg-2 col-form-label">Name</label>
+            <div class="col-sm-9 col-lg-10">
+                <input asp-for="Name" class="form=control" />
+            </div>
+        </div>
+        <div class="row mb-1">
+            <label asp-for="PhoneNumber" class="col-sm-3 col-lg-2 col-form-label">Phone Number</label>
+            <div class="col-sm-9 col-lg-10">
+                <input asp-for="PhoneNumber" class="form=control" />
+            </div>
+        </div>
+        <div class="row mb-1">
+            <label asp-for="Address" class="col-sm-3 col-lg-2 col-form-label">Address</label>
+            <div class="col-sm-9 col-lg-10">
+                <input asp-for="Address" class="form=control" />
+            </div>
+        </div>
+        <div class="row mb-1">
+            <label asp-for="Note" class="col-sm-3 col-lg-2 col-form-label">Note</label>
+            <div class="col-sm-9 col-lg-10">
+                <input asp-for="Note" class="form=control" />
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn-primary btn">Add</button>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Cancel</a>
+        </div>
+    </form>
+</div>
