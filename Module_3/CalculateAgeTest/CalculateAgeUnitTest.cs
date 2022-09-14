@@ -12,7 +12,6 @@ namespace CalculateAgeTest
             int? actual, expected = 31;
             // Act
             var model = new CalculateAgeModel();
-            model.Name = "Deon";
             model.BirthYear = 1991;
             actual = model.AgeThisYear();
             // Assert
