@@ -1,0 +1,46 @@
+﻿@model CalculateAgeModel;
+
+@{
+    ViewBag.Title = "Age Calculator";
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-content-center">
+            <form asp-action="Index" class="col-sm-6 col-md-4 col-lg-2">
+                <h1 class="text-center">Age Calculator</h1>
+                <div>
+                    <label asp-for="Name">Name</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="BirthYear">Birth Year</label>
+                    <input asp-for="BirthYear" class="form-control" placeholder="YYYY" />
+                    <span asp-validation-for="BirthYear" class="text-danger"></span>
+                </div>
+                 <div>
+                     <button type="submit" class="btn btn-primary">Calculate Age</button>
+                     <a asp-action="index" class="btn btn-danger">Clear</a>
+                 </div>
+                 <div class="mt-5">
+                    <label >Name</label>
+                    <input value="@ViewBag.Name" class="form-control" disabled />
+                </div>
+                <div>
+                    <label >Calculated Age</label>
+                    <input value="@ViewBag.Age"  class="form-control" disabled />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
