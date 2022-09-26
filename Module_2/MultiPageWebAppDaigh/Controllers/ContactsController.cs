@@ -12,6 +12,7 @@ namespace MultiPageWebAppDaigh.Controllers
             context = ctx;
         }
 
+
         [HttpGet]
         public IActionResult Add()
         {
@@ -35,6 +36,7 @@ namespace MultiPageWebAppDaigh.Controllers
         }
 
         [HttpGet]
+        [Route("contact-list/contact/delete-contact/{id?}/{slug?}")]
         public IActionResult Delete(int id)
         {
             var contact = context.Contact.Find(id);

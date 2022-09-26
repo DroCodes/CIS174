@@ -11,6 +11,7 @@ namespace MultiPageWebAppDaigh.Controllers
         {
             context = ctx;
         }
+        [Route("/")]
         public IActionResult Index()
         {
             var listContacts = context.Contact.OrderBy(c => c.Name).ToList();

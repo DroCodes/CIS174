@@ -33,6 +33,10 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
+    name: "custom",
+    pattern: "contact-list/{controller}/{action}/{id?}/{slug?}");
+
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}/{slug?}");
 

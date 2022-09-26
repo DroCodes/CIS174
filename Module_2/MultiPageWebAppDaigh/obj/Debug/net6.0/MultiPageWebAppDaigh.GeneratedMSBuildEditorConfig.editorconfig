@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ddaig\source\repos\CIs174\Module_2\MultiPageWebAppDaigh
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/ddaig/source/repos/CIs174/Module_2/MultiPageWebAppDaigh/Views/Admin/Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ddaig/source/repos/CIs174/Module_2/MultiPageWebAppDaigh/Views/Contacts/AddContact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdHNcQWRkQ29udGFjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
