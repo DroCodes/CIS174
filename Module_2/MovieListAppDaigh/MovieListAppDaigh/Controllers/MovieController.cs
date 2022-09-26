@@ -12,14 +12,17 @@ namespace MovieListAppDaigh.Controllers
         }
 
         [HttpGet]
+        //[Route("add-movie")]
         public IActionResult Add()
         {
             ViewBag.Action = "Add";
             ViewBag.Genres = context.Genres.OrderBy(g => g.Name).ToList();
             return View("Edit", new Movie());
         }
+        [HttpGet]
 
         [HttpGet]
+        //[Route("edit-movie/{id?}/{slug?}")]
         public IActionResult Edit(int id)
         {
             ViewBag.Action = "Edit";
