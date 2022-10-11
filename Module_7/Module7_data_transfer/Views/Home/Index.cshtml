@@ -1,0 +1,39 @@
+﻿@model CountryListViewModel
+@{
+    ViewData["Title"] = "Olympic Countries"; // helper function no longer needed
+}
+
+<div class="row">
+    <div class="col-sm-3">
+        <h3>Conference</h3>
+        <div class="list-group">
+            @foreach (Game game in Model.Games)
+            {
+                <a asp-action="Index" asp-route-conference="@game.GameID" asp-route-division="@Model.ActiveGame" class="list-group-item
+                @Model.CheckActiveCat(game.GameID)">@game.Name</a>
+            }
+        </div>
+        <h3>Division</h3>
+        <div class="list-group">
+            @foreach (Category category in Model.Categories)
+            {
+                <a asp-action="Index" asp-route-conference="@Model.ActiveCat" asp-route-division="@category.CategoryID" class="list-group-item @Model.CheckActiveGame(category.CategoryID)">@category.Name</a>
+            }
+        </div>
+    </div>
+    <div class="col-sm-9">
+        <ul class="list-inline">
+            @foreach (Country country in Model.Country)
+            {
+                <li class="list-inline-item">
+                    <a asp-action="Details" asp-route-id="@country.CountryID">
+                        <img src="~/images/@country.FlagImage" alt="@country.Name"
+                         title="@country.Name | @country.Category.Name @country.Game.Name" />
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+

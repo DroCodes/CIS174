@@ -19,7 +19,6 @@ namespace MovieListAppDaigh.Controllers
             ViewBag.Genres = context.Genres.OrderBy(g => g.Name).ToList();
             return View("Edit", new Movie());
         }
-        [HttpGet]
 
         [HttpGet]
         //[Route("edit-movie/{id?}/{slug?}")]
