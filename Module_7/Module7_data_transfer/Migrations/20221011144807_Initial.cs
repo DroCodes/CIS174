@@ -72,10 +72,10 @@ namespace Module7_data_transfer.Migrations
                 columns: new[] { "GameID", "Name" },
                 values: new object[,]
                 {
-                    { "parlympics", "Winter Olympics" },
+                    { "paralympics", "Paralympic Games" },
                     { "summer-olympics", "Summer Olympics" },
                     { "winter-olympics", "Winter Olympics" },
-                    { "Youth-olympics", "Youth Olympic Games" }
+                    { "youth-olympics", "Youth Olympic Games" }
                 });
 
             migrationBuilder.InsertData(
@@ -83,7 +83,7 @@ namespace Module7_data_transfer.Migrations
                 columns: new[] { "CountryID", "CategoryID", "FlagImage", "GameID", "Name" },
                 values: new object[,]
                 {
-                    { "aus", "outdoor", "images/australian_flag.png", "parlympics", "Australia" },
+                    { "aus", "outdoor", "images/austrian_flag.png", "paralympics", "Australia" },
                     { "bra", "outdoor", "images/brazillian_flag.png", "summer-olympics", "Brazil" },
                     { "can", "indoor", "images/canadian_flag.png", "winter-olympics", "Canada" },
                     { "chi", "indoor", "images/chinese_flag.png", "summer-olympics", "China" },
@@ -97,16 +97,16 @@ namespace Module7_data_transfer.Migrations
                     { "jap", "outdoor", "images/japanese_flag.png", "winter-olympics", "Japan" },
                     { "mex", "indoor", "images/mexican_flag.png", "summer-olympics", "Mexico" },
                     { "net", "outdoor", "images/netherlands_flag.png", "summer-olympics", "Netherlands" },
-                    { "pak", "outdoor", "images/pakistan_flag.png", "parlympics", "Pakistan" },
+                    { "pak", "outdoor", "images/pakistan_flag.png", "paralympics", "Pakistan" },
                     { "por", "outdoor", "images/portugese_flag.png", "youth-olympics", "Portugal" },
                     { "rus", "indoor", "images/russian_flag.png", "youth-olympics", "Russia" },
                     { "slov", "outdoor", "images/slovakian_flag.png", "youth-olympics", "Slovakia" },
                     { "swe", "indoor", "images/swedish_flag.png", "winter-olympics", "Sweden" },
-                    { "thai", "indoor", "images/thai_flag.png", "parlympics", "Thailand" },
-                    { "ukr", "indoor", "images/ukrain_flag.png", "parlympics", "Ukrain" },
-                    { "uru", "indoor", "images/uruguay_flag.png", "parlympics", "Uruguay" },
+                    { "thai", "indoor", "images/thai_flag.png", "paralympics", "Thailand" },
+                    { "ukr", "indoor", "images/ukrain_flag.png", "paralympics", "Ukrain" },
+                    { "uru", "indoor", "images/uruguay_flag.png", "paralympics", "Uruguay" },
                     { "usa", "outdoor", "images/usa_flag.png", "summer-olympics", "USA" },
-                    { "zim", "outdoor", "images/zimbabwe_flag.png", "parlympics", "Zimbabwe" }
+                    { "zim", "outdoor", "images/zimbabwe_flag.png", "paralympics", "Zimbabwe" }
                 });
 
             migrationBuilder.CreateIndex(

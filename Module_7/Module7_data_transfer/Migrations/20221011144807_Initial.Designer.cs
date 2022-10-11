@@ -11,7 +11,7 @@ using Module7_data_transfer.Models;
 namespace Module7_data_transfer.Migrations
 {
     [DbContext(typeof(CountryContext))]
-    [Migration("20221011033727_Initial")]
+    [Migration("20221011144807_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -179,7 +179,7 @@ namespace Module7_data_transfer.Migrations
                             CountryID = "thai",
                             CategoryID = "indoor",
                             FlagImage = "images/thai_flag.png",
-                            GameID = "parlympics",
+                            GameID = "paralympics",
                             Name = "Thailand"
                         },
                         new
@@ -187,7 +187,7 @@ namespace Module7_data_transfer.Migrations
                             CountryID = "uru",
                             CategoryID = "indoor",
                             FlagImage = "images/uruguay_flag.png",
-                            GameID = "parlympics",
+                            GameID = "paralympics",
                             Name = "Uruguay"
                         },
                         new
@@ -195,15 +195,15 @@ namespace Module7_data_transfer.Migrations
                             CountryID = "ukr",
                             CategoryID = "indoor",
                             FlagImage = "images/ukrain_flag.png",
-                            GameID = "parlympics",
+                            GameID = "paralympics",
                             Name = "Ukrain"
                         },
                         new
                         {
                             CountryID = "aus",
                             CategoryID = "outdoor",
-                            FlagImage = "images/australian_flag.png",
-                            GameID = "parlympics",
+                            FlagImage = "images/austrian_flag.png",
+                            GameID = "paralympics",
                             Name = "Australia"
                         },
                         new
@@ -211,7 +211,7 @@ namespace Module7_data_transfer.Migrations
                             CountryID = "pak",
                             CategoryID = "outdoor",
                             FlagImage = "images/pakistan_flag.png",
-                            GameID = "parlympics",
+                            GameID = "paralympics",
                             Name = "Pakistan"
                         },
                         new
@@ -219,7 +219,7 @@ namespace Module7_data_transfer.Migrations
                             CountryID = "zim",
                             CategoryID = "outdoor",
                             FlagImage = "images/zimbabwe_flag.png",
-                            GameID = "parlympics",
+                            GameID = "paralympics",
                             Name = "Zimbabwe"
                         },
                         new
@@ -298,12 +298,12 @@ namespace Module7_data_transfer.Migrations
                         },
                         new
                         {
-                            GameID = "parlympics",
-                            Name = "Winter Olympics"
+                            GameID = "paralympics",
+                            Name = "Paralympic Games"
                         },
                         new
                         {
-                            GameID = "Youth-olympics",
+                            GameID = "youth-olympics",
                             Name = "Youth Olympic Games"
                         });
                 });

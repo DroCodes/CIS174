@@ -177,15 +177,15 @@ namespace Module7_data_transfer.Migrations
                             CountryID = "thai",
                             CategoryID = "indoor",
                             FlagImage = "images/thai_flag.png",
-                            GameID = "parlympics",
+                            GameID = "paralympics",
                             Name = "Thailand"
                         },
                         new
                         {
                             CountryID = "uru",
                             CategoryID = "indoor",
-                            FlagImage = "images/uruguay_flag.png",
-                            GameID = "parlympics",
+                            FlagImage = "images/uraguay_flag.png",
+                            GameID = "paralympics",
                             Name = "Uruguay"
                         },
                         new
@@ -193,15 +193,15 @@ namespace Module7_data_transfer.Migrations
                             CountryID = "ukr",
                             CategoryID = "indoor",
                             FlagImage = "images/ukrain_flag.png",
-                            GameID = "parlympics",
+                            GameID = "paralympics",
                             Name = "Ukrain"
                         },
                         new
                         {
                             CountryID = "aus",
                             CategoryID = "outdoor",
-                            FlagImage = "images/australian_flag.png",
-                            GameID = "parlympics",
+                            FlagImage = "images/austrian_flag.png",
+                            GameID = "paralympics",
                             Name = "Australia"
                         },
                         new
@@ -209,7 +209,7 @@ namespace Module7_data_transfer.Migrations
                             CountryID = "pak",
                             CategoryID = "outdoor",
                             FlagImage = "images/pakistan_flag.png",
-                            GameID = "parlympics",
+                            GameID = "paralympics",
                             Name = "Pakistan"
                         },
                         new
@@ -217,7 +217,7 @@ namespace Module7_data_transfer.Migrations
                             CountryID = "zim",
                             CategoryID = "outdoor",
                             FlagImage = "images/zimbabwe_flag.png",
-                            GameID = "parlympics",
+                            GameID = "paralympics",
                             Name = "Zimbabwe"
                         },
                         new
@@ -296,8 +296,8 @@ namespace Module7_data_transfer.Migrations
                         },
                         new
                         {
-                            GameID = "parlympics",
-                            Name = "Winter Olympics"
+                            GameID = "paralympics",
+                            Name = "Paralympic Games"
                         },
                         new
                         {

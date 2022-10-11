@@ -12,9 +12,12 @@
             get => categories;
             set
             {
-                categories = value;
-                categories.Insert(0,
-                    new Category { CategoryID = "all", Name = "All" });
+                categories = new List<Category>
+                {
+                    new Category { CategoryID = "all", Name = "All"}
+                };
+
+                categories.AddRange(value);
             }
         }
         private List<Game> games;
@@ -23,16 +26,19 @@
             get => games;
             set
             {
-                games = value;
-                games.Insert(0,
-                    new Game { GameID = "all", Name = "All" });
+                games = new List<Game>
+                {
+                    new Game { GameID = "all", Name = "All"}
+                };
+
+                games.AddRange(value);
             }
         }
 
         public string CheckActiveCat(string c) =>
                 c.ToLower() == ActiveCat.ToLower() ? "active" : "";
 
-        public string CheckActiveGame(string d) =>
-            d.ToLower() == ActiveGame.ToLower() ? "active" : "";
+        public string CheckActiveGame(string g) =>
+            g.ToLower() == ActiveGame.ToLower() ? "active" : "";
     }
 }

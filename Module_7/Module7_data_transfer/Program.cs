@@ -23,8 +23,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+ 
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "custom",
+    pattern: "{controller}/{action}/game/{activeGame}/cat/{activeCat}");
 
 app.MapControllerRoute(
     name: "default",

@@ -20,7 +20,7 @@ namespace Module7_data_transfer.Models
             modelBuilder.Entity<Game>().HasData(
                 new Game { GameID = "winter-olympics", Name = "Winter Olympics" },
                 new Game { GameID = "summer-olympics", Name = "Summer Olympics" },
-                new Game { GameID = "parlympics", Name = "Winter Olympics" },
+                new Game { GameID = "paralympics", Name = "Paralympic Games" },
                 new Game { GameID = "youth-olympics", Name = "Youth Olympic Games" });
 
             modelBuilder.Entity<Country>().HasData(
@@ -36,12 +36,12 @@ namespace Module7_data_transfer.Models
                 new { CountryID = "bra", Name = "Brazil", GameID = "summer-olympics", CategoryID = "outdoor", FlagImage = "images/brazillian_flag.png" },
                 new { CountryID = "net", Name = "Netherlands", GameID = "summer-olympics", CategoryID = "outdoor", FlagImage = "images/netherlands_flag.png" },
                 new { CountryID = "usa", Name = "USA", GameID = "summer-olympics", CategoryID = "outdoor", FlagImage = "images/usa_flag.png" },
-                new { CountryID = "thai", Name = "Thailand", GameID = "parlympics", CategoryID = "indoor", FlagImage = "images/thai_flag.png" },
-                new { CountryID = "uru", Name = "Uruguay", GameID = "parlympics", CategoryID = "indoor", FlagImage = "images/uruguay_flag.png" },
-                new { CountryID = "ukr", Name = "Ukrain", GameID = "parlympics", CategoryID = "indoor", FlagImage = "images/ukrain_flag.png" },
-                new { CountryID = "aus", Name = "Australia", GameID = "parlympics", CategoryID = "outdoor", FlagImage = "images/australian_flag.png" },
-                new { CountryID = "pak", Name = "Pakistan", GameID = "parlympics", CategoryID = "outdoor", FlagImage = "images/pakistan_flag.png" },
-                new { CountryID = "zim", Name = "Zimbabwe", GameID = "parlympics", CategoryID = "outdoor", FlagImage = "images/zimbabwe_flag.png" },
+                new { CountryID = "thai", Name = "Thailand", GameID = "paralympics", CategoryID = "indoor", FlagImage = "images/thai_flag.png" },
+                new { CountryID = "uru", Name = "Uruguay", GameID = "paralympics", CategoryID = "indoor", FlagImage = "images/uraguay_flag.png" },
+                new { CountryID = "ukr", Name = "Ukrain", GameID = "paralympics", CategoryID = "indoor", FlagImage = "images/ukrain_flag.png" },
+                new { CountryID = "aus", Name = "Australia", GameID = "paralympics", CategoryID = "outdoor", FlagImage = "images/austrian_flag.png" },
+                new { CountryID = "pak", Name = "Pakistan", GameID = "paralympics", CategoryID = "outdoor", FlagImage = "images/pakistan_flag.png" },
+                new { CountryID = "zim", Name = "Zimbabwe", GameID = "paralympics", CategoryID = "outdoor", FlagImage = "images/zimbabwe_flag.png" },
                 new { CountryID = "fra", Name = "France", GameID = "youth-olympics", CategoryID = "indoor", FlagImage = "images/french_flag.png" },
                 new { CountryID = "cyp", Name = "Cyprus", GameID = "youth-olympics", CategoryID = "indoor", FlagImage = "images/cyprus_flag.png" },
                 new { CountryID = "rus", Name = "Russia", GameID = "youth-olympics", CategoryID = "indoor", FlagImage = "images/russian_flag.png" },
