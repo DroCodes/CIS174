@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Module7_data_transfer.Models;
 using System.Diagnostics;
 
@@ -13,6 +14,10 @@ namespace Module7_data_transfer.Controllers
         }
         public ViewResult Index(string activeCat = "all", string activeGame = "all")
         {
+            var session = new CountrySession(HttpContext.Session);
+            session.SetActiveCat(activeCat);
+            session.SetActiveGame(activeGame);
+
             var model = new CountryListViewModel
             {
                 ActiveCat = activeCat,
@@ -29,6 +34,41 @@ namespace Module7_data_transfer.Controllers
             model.Country = query.ToList();
 
             return View(model);
+        }
+
+        public IActionResult Details(string id)
+        {
+            var session = new CountrySession(HttpContext.Session);
+            var model = new CountryViewModel
+            {
+                Country = context.Countrys
+                    .Include(c => c.Category).Include(c => c.Game).FirstOrDefault(c => c.CountryID == id),
+
+                ActiveGame = session.GetActiveGame(),
+                ActiveCat = session.GetActiveCat()
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public RedirectToActionResult Add(CountryViewModel model)
+        {
+            model.Country = context.Countrys.Include(c => c.Category).Include(c => c.Game).Where(c => c.CountryID == model.Country.CountryID).FirstOrDefault();
+
+            var session = new CountrySession(HttpContext.Session);
+            var countries = session.GetMyCountry();
+            countries.Add(model.Country);
+            session.SetMyCountry(countries);
+
+            TempData["Message"] = $"{model.Country.Name} added to your favorites";
+
+            return RedirectToAction("Index",
+                new
+                {
+                    ActiveCat = session.GetActiveCat(),
+                    ActiveGame = session.GetActiveGame()
+                });
         }
     }
 }
