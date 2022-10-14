@@ -1,10 +1,9 @@
 ﻿namespace Module7_data_transfer.Models
 {
-    public class CountryListViewModel
+    public class CountryListViewModel : CountryViewModel
     {
+        public string UserName { get; set; }
         public List<Country> Country { get; set; }
-        public string ActiveCat { get; set; }
-        public string ActiveGame { get; set; }
 
         private List<Category> categories;
         public List<Category> Categories

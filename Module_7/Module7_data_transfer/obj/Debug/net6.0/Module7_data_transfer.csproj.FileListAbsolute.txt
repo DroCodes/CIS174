@@ -59,3 +59,7 @@ C:\Users\ddaig\source\repos\CIs174\Module_7\Module7_data_transfer\obj\Debug\net6
 C:\Users\ddaig\source\repos\CIs174\Module_7\Module7_data_transfer\obj\Debug\net6.0\Module7_data_transfer.pdb
 C:\Users\ddaig\source\repos\CIs174\Module_7\Module7_data_transfer\obj\Debug\net6.0\Module7_data_transfer.genruntimeconfig.cache
 C:\Users\ddaig\source\repos\CIs174\Module_7\Module7_data_transfer\obj\Debug\net6.0\ref\Module7_data_transfer.dll
+C:\Users\ddaig\source\repos\CIs174\Module_7\Module7_data_transfer\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\ddaig\source\repos\CIs174\Module_7\Module7_data_transfer\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\ddaig\source\repos\CIs174\Module_7\Module7_data_transfer\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\ddaig\source\repos\CIs174\Module_7\Module7_data_transfer\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
