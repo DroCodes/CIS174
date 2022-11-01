@@ -12,24 +12,18 @@ namespace Module7_data_transfer.Controllers
         {
             context = ctx;
         }
-        public ViewResult Index(string activeCat = "all", string activeGame = "all")
+        public IActionResult Index(CountryListViewModel model)
         {
             var session = new CountrySession(HttpContext.Session);
-            session.SetActiveCat(activeCat);
-            session.SetActiveGame(activeGame);
+            session.SetActiveCat(model.ActiveCat);
+            session.SetActiveGame(model.ActiveGame);
 
-            var model = new CountryListViewModel
-            {
-                ActiveCat = activeCat,
-                ActiveGame = activeGame,
-                Categories = context.Categories.ToList(),
-                Games = context.Games.ToList()
+            model.Categories = context.Categories.ToList();
+                model.Games = context.Games.ToList();
 
-            };
-
-            IQueryable<Country> query = context.Countrys; 
-            if (activeCat != "all") query = query.Where(t => t.Category.CategoryID.ToLower() == activeCat.ToLower());
-            if (activeGame != "all") query = query.Where(t => t.Game.GameID.ToLower() == activeGame.ToLower());
+            IQueryable<Country> query = context.Countrys;
+            if (model.ActiveCat != "all") query = query.Where(t => t.Category.CategoryID.ToLower() == model.ActiveCat.ToLower());
+            if (model.ActiveGame != "all") query = query.Where(t => t.Game.GameID.ToLower() == model.ActiveGame.ToLower());
 
             model.Country = query.ToList();
 
